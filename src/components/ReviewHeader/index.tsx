@@ -1,34 +1,32 @@
-import * as S from './styles'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
+import Star from './star'
+import Button from 'components/Button'
 
-const ReviewHeader = () => {
-  library.add(faStar)
-  return (
-    <S.Wrapper>
-      <S.Title>
-        Avaliações de
-        <a href="/coworking/space/bsb--brasilia">BSB Coworking</a>
-        <span>Brasília/DF</span>
-      </S.Title>
-      <S.Divider />
-      <div className="row">
-        <div className="stars">
-          <span className="icons-star">
-            <FontAwesomeIcon size="1x" icon="star" />
-          </span>
-          <span className="num-review">5 avaliações</span>
-        </div>
-        <input
-          id="writeReviewBtn"
-          className="btn btn-block btn-outline btn-review pull-right"
-          value="Avaliar"
-          type="button"
-        />
-      </div>
-    </S.Wrapper>
-  )
-}
+import * as S from './styles'
+
+const ReviewHeader = () => (
+  <>
+    <S.Title>
+      Avaliações de
+      <a href="/coworking/space/bsb--brasilia">BSB Coworking</a>
+      <S.City>Brasília/DF</S.City>
+    </S.Title>
+    <S.Divider />
+    <S.Row>
+      <S.IconWrapper>
+        <S.Stars>
+          <Star />
+          <Star />
+          <Star />
+          <Star />
+          <Star outline />
+        </S.Stars>
+        <S.NumReview>5 avaliações</S.NumReview>
+      </S.IconWrapper>
+      <S.ButtonWrapper>
+        <Button>Avaliar</Button>
+      </S.ButtonWrapper>
+    </S.Row>
+  </>
+)
 
 export default ReviewHeader

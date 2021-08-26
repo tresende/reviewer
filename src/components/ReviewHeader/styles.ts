@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components'
-
-export const Wrapper = styled.section``
+import media from 'styled-media-query'
 
 export const Title = styled.h1`
   ${({ theme }) => css`
@@ -14,10 +13,16 @@ export const Title = styled.h1`
         content: ' ';
       }
     }
-    span {
-      font-size: ${theme.font.sizes.large};
-      font-weight: ${theme.font.normal};
-    }
+  `}
+`
+
+export const City = styled.span`
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.large};
+    font-weight: ${theme.font.normal};
+    ${media.lessThan('small')`
+        display: block;
+      `}
   `}
 `
 
@@ -27,4 +32,35 @@ export const Divider = styled.hr`
     margin: ${theme.spacings.xxsmall} 0;
     border-top: ${theme.border.default} ${theme.colors.gray100};
   `}
+`
+
+export const Row = styled.div`
+  display: flex;
+  justify-content: space-between;
+  ${media.lessThan('medium')`
+    flex-direction: column;
+  `}
+`
+export const IconWrapper = styled.div`
+  display: flex;
+  align-items: baseline;
+  flex: 4;
+  margin-bottom: 1rem;
+`
+
+export const Stars = styled.div`
+  display: flex;
+  width: 16rem;
+`
+
+export const NumReview = styled.span`
+  ${({ theme }) => css`
+    font-weight: ${theme.font.bold};
+    font-size: ${theme.font.sizes.medium};
+  `}
+`
+
+export const ButtonWrapper = styled.div`
+  display: flex;
+  flex: 2;
 `

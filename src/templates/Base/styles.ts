@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.main`
   @media (min-width: 1200px) {
     width: 1170px;
   }

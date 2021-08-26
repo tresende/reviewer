@@ -11,7 +11,7 @@ export default {
     family: "'Open Sans',sans-serif,'Helvetica Neue',Helvetica,Arial",
     light: 300,
     normal: 400,
-    bold: 600,
+    bold: 700,
     sizes: {
       xxsmall: '0.7rem',
       xsmall: '1.2rem',
@@ -27,7 +27,8 @@ export default {
     primary: '#FABA40',
     secondary: '#3CD3C1',
     mainBg: '#06092B',
-    white: '#FAFAFA',
+    white: '#FFFFFF',
+    yellow: '#FAAF40',
     gray100: '#EEEEEE;',
     gray500: '#4b4b4b;'
   },
