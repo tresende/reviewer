@@ -29,7 +29,7 @@ export const City = styled.span`
 export const Divider = styled.hr`
   ${({ theme }) => css`
     border: 0;
-    margin: ${theme.spacings.xxsmall} 0;
+    margin: 1rem 0;
     border-top: ${theme.border.default} ${theme.colors.gray100};
   `}
 `
@@ -49,8 +49,12 @@ export const IconWrapper = styled.div`
 `
 
 export const Stars = styled.div`
-  display: flex;
-  width: 16rem;
+  ${({ theme }) => css`
+    display: flex;
+    width: 16rem;
+    justify-content: space-between;
+    margin-right: ${theme.spacings.small};
+  `}
 `
 
 export const NumReview = styled.span`

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.main`
   @media (min-width: 1200px) {
@@ -13,6 +14,8 @@ export const Wrapper = styled.main`
 `
 
 export const Content = styled.div`
-  padding-right: 15px;
-  padding-left: 15px;
+  ${media.lessThan('medium')`
+    padding-right: 15px;
+    padding-left: 15px;
+  `}
 `

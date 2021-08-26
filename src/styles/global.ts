@@ -83,6 +83,14 @@ const GlobalStyles: GlobalStyleComponent<null, DefaultTheme> = createGlobalStyle
   }
 
   ${({ theme }) => css`
+    html,
+    body,
+    body > div:first-child,
+    div#__next,
+    div#__next > main {
+      height: 100%;
+    }
+
     html {
       font-size: 62.5%;
     }

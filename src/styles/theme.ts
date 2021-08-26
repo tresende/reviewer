@@ -13,7 +13,7 @@ export default {
     normal: 400,
     bold: 700,
     sizes: {
-      xxsmall: '0.7rem',
+      xxsmall: '1rem',
       xsmall: '1.2rem',
       small: '1.4rem',
       medium: '1.6rem',
@@ -25,12 +25,14 @@ export default {
   },
   colors: {
     primary: '#FABA40',
-    secondary: '#3CD3C1',
-    mainBg: '#06092B',
-    white: '#FFFFFF',
     yellow: '#FAAF40',
-    gray100: '#EEEEEE;',
-    gray500: '#4b4b4b;'
+    black: '#222222',
+    white: '#FFFFFF',
+    gray100: '#EEEEEE',
+    gray200: '#F6F6F6',
+    gray300: '#D8D8D8',
+    gray400: '#CCCCCC',
+    gray500: '#4b4b4b'
   },
   spacings: {
     xxsmall: '0.8rem',
