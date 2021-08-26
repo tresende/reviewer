@@ -1,17 +1,24 @@
+import Button from 'components/Button'
 import * as S from './styles'
 
 const Header = () => (
-  <nav id="hamnav">
-    <label htmlFor="hamburger">&#9776;</label>
-    <input type="checkbox" id="hamburger" />
-
-    <div id="hamitems">
-      <a href="a.html">First</a>
-      <a href="b.html">Second</a>
-      <a href="c.html">Third</a>
-      <a href="d.html">Forth</a>
-    </div>
-  </nav>
+  <S.Wrapper>
+    <S.Icon htmlFor="hamburger">&#9776;</S.Icon>
+    <S.Toggle type="checkbox" id="hamburger" />
+    <S.Items id="items">
+      <S.MenuItem>
+        <img src="img/logo.png" alt="Beer Or Coffee" />
+      </S.MenuItem>
+      <S.MenuItem>Espaços de Coworking</S.MenuItem>
+      <S.MenuItem>Planos</S.MenuItem>
+      <S.MenuItem>Descontos</S.MenuItem>
+      <S.MenuItem style={{ flex: 3 }}>
+        <S.HeaderButton>Adiquirir um Plano</S.HeaderButton>
+        <span>Empresas</span>
+        <S.HeaderButton color="white">Oi, Thiago</S.HeaderButton>
+      </S.MenuItem>
+    </S.Items>
+  </S.Wrapper>
 )
 
 export default Header

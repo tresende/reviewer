@@ -3,6 +3,7 @@ import ReviewHeader from 'components/ReviewHeader'
 import ReviewComments from 'components/ReviewComments'
 
 import * as S from './styles'
+import Header from 'components/Header'
 
 type HomeProps = {
   data: CompanyReview
@@ -10,7 +11,9 @@ type HomeProps = {
 
 const Home = ({ data }: HomeProps) => (
   <S.Wrapper>
-    <S.Menu />
+    <S.Menu>
+      <Header />
+    </S.Menu>
     <S.Container>
       <S.Main>
         <ReviewHeader {...data} />
