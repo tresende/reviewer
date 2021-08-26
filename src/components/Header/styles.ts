@@ -48,6 +48,7 @@ export const MenuItem = styled.div`
     cursor: pointer;
     ${media.lessThan(breakpoint)`
       border-bottom:${theme.border.default} ${theme.colors.gray500};
+      flex-direction: column;
     `}
   `}
 `
@@ -85,9 +86,13 @@ export const HeaderButton = styled.button<HeaderButtonProps>`
     padding: ${theme.spacings.xsmall};
     border-radius: 30px;
     font-weight: ${theme.font.bold};
-  `}
 
-  ${media.lessThan(breakpoint)`
-
+    ${media.lessThan(breakpoint)`
+      width:100%;
+      padding:  ${theme.spacings.xxsmall};
+    `}
   `}
+`
+export const Subitem = styled.span`
+  margin: 1rem 0;
 `

@@ -34,7 +34,6 @@ export const Main = styled.main`
 export const Menu = styled.section`
   ${({ theme }) => css`
     width: 100%;
-    height: 82px;
     background-color: ${theme.colors.black};
   `}
 `

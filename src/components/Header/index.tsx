@@ -1,4 +1,3 @@
-import Button from 'components/Button'
 import * as S from './styles'
 
 const Header = () => (
@@ -14,7 +13,7 @@ const Header = () => (
       <S.MenuItem>Descontos</S.MenuItem>
       <S.MenuItem style={{ flex: 3 }}>
         <S.HeaderButton>Adiquirir um Plano</S.HeaderButton>
-        <span>Empresas</span>
+        <S.Subitem>Empresas</S.Subitem>
         <S.HeaderButton color="white">Oi, Thiago</S.HeaderButton>
       </S.MenuItem>
     </S.Items>
