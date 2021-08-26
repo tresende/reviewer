@@ -1,8 +1,6 @@
 import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.div`
-  display: flex;
-
   @media (min-width: 1200px) {
     width: 1170px;
   }
@@ -15,8 +13,6 @@ export const Wrapper = styled.div`
 `
 
 export const Content = styled.div`
-  ${({ theme }) => css`
-    margin-top: ${theme.spacings.xlarge};
-    flex: 1 0 auto;
-  `}
+  padding-right: 15px;
+  padding-left: 15px;
 `
