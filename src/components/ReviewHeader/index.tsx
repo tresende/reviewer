@@ -1,4 +1,4 @@
-import Star from './star'
+import Stars from 'components/Stars'
 import Button from 'components/Button'
 
 import * as S from './styles'
@@ -18,13 +18,7 @@ const ReviewHeader = ({ company, location }: ReviewHeaderProps) => (
     <S.Divider />
     <S.Row>
       <S.IconWrapper>
-        <S.Stars>
-          <Star />
-          <Star />
-          <Star />
-          <Star />
-          <Star outline />
-        </S.Stars>
+        <Stars quantity={4} />
         <S.NumReview>5 avaliações</S.NumReview>
       </S.IconWrapper>
       <S.ButtonWrapper>

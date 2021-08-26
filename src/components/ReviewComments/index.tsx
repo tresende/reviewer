@@ -1,11 +1,21 @@
 import Breadcrumb from 'components/Breadcrumb'
+import CommentComponent from 'components/Comment'
+import Comment from 'models/Comment'
 
 import * as S from './styles'
 
-const ReviewComments = () => (
+export type ReviewCommentsProps = {
+  comments: Comment[]
+}
+
+const ReviewComments = ({ comments }: ReviewCommentsProps) => (
   <S.Wrapper>
     <Breadcrumb />
-    <S.Container />
+    <S.Container>
+      {comments.map((comment) => (
+        <CommentComponent key={comment.id} comment={comment} />
+      ))}
+    </S.Container>
   </S.Wrapper>
 )
 

@@ -1,5 +1,5 @@
+import CompanyReview from 'models/CompanyReview'
 import ReviewHeader from 'components/ReviewHeader'
-import { CompanyReview } from 'models/CompanyReview'
 import ReviewComments from 'components/ReviewComments'
 
 import * as S from './styles'
@@ -18,7 +18,7 @@ const Home = ({ data }: HomeProps) => (
     </S.Container>
     <S.Content>
       <S.Container>
-        <ReviewComments />
+        <ReviewComments comments={data.comments} />
       </S.Container>
     </S.Content>
   </S.Wrapper>

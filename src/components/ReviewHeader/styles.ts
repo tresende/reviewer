@@ -47,16 +47,6 @@ export const IconWrapper = styled.div`
   flex: 4;
   margin-bottom: 1rem;
 `
-
-export const Stars = styled.div`
-  ${({ theme }) => css`
-    display: flex;
-    width: 16rem;
-    justify-content: space-between;
-    margin-right: ${theme.spacings.small};
-  `}
-`
-
 export const NumReview = styled.span`
   ${({ theme }) => css`
     font-weight: ${theme.font.bold};

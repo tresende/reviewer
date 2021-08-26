@@ -99,6 +99,10 @@ const GlobalStyles: GlobalStyleComponent<null, DefaultTheme> = createGlobalStyle
       font-family: ${theme.font.family};
       font-size: ${theme.font.sizes.medium};
     }
+
+    p {
+      line-height: 2rem;
+    }
   `}
 `
 
