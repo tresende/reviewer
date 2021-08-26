@@ -8,6 +8,9 @@ export const Title = styled.h1`
     a {
       color: ${theme.colors.primary};
       text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
       &::before,
       &::after {
         content: ' ';

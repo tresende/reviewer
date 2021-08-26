@@ -9,12 +9,14 @@ export type StarsProps = {
 
 const MAX_RATING = 5
 
-const Stars = ({ quantity = 0, size = 28 }: StarsProps) => {
+const Stars = ({ quantity = 1, size = 28 }: StarsProps) => {
   const solid = [...Array(quantity)]
   const outline = [...Array(MAX_RATING - quantity)]
 
+  const titleMap = ['Péssimo', 'Ruim', 'Mediano', 'Bom', 'Perfeito']
+
   return (
-    <S.Wrapper>
+    <S.Wrapper title={titleMap[quantity - 1]}>
       {solid.map((_, i) => (
         <Star key={i} size={size} />
       ))}

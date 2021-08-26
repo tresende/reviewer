@@ -32,7 +32,8 @@ export default {
     gray200: '#F6F6F6',
     gray300: '#D8D8D8',
     gray400: '#CCCCCC',
-    gray500: '#4b4b4b'
+    gray500: '#4b4b4b',
+    gray600: '#4A4A4A'
   },
   spacings: {
     xxsmall: '0.8rem',

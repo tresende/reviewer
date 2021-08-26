@@ -1,17 +1,13 @@
 import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.div`
-  ${({ theme }) => css`
-    display: flex;
-  `}
+  display: flex;
 `
 
 export const Avatar = styled.img`
-  ${({ theme }) => css`
-    border-radius: 50%;
-    height: 48px;
-    width: 48px;
-  `}
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
 `
 
 export const Comment = styled.div`
@@ -28,28 +24,31 @@ export const CommentInfo = styled.div`
 `
 
 export const Name = styled.span`
-  ${({ theme }) => css``}
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.small};
+    font-weight: ${theme.font.bold};
+    margin-right: ${theme.spacings.xxsmall};
+    color: ${theme.colors.gray500};
+  `}
 `
 
-export const Verified = styled.span`
-  ${({ theme }) => css``}
-`
-
-export const Date = styled.span`
-  ${({ theme }) => css``}
+export const SmallText = styled.span`
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.xsmall};
+    color: ${theme.colors.gray600};
+  `}
 `
 
 export const Text = styled.p`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.xsmall};
+    margin-top: ${theme.spacings.xxsmall};
   `}
 `
 
 export const CommentHeader = styled.div`
-  ${({ theme }) => css`
-    display: flex;
-    justify-content: space-between;
-  `}
+  display: flex;
+  justify-content: space-between;
 `
 
 export const Score = styled.div`
