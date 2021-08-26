@@ -16,7 +16,7 @@ export const Title = styled.h1`
   `}
 `
 
-export const City = styled.span`
+export const Location = styled.span`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.large};
     font-weight: ${theme.font.normal};

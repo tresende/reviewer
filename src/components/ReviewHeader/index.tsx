@@ -3,12 +3,17 @@ import Button from 'components/Button'
 
 import * as S from './styles'
 
-const ReviewHeader = () => (
+export type ReviewHeaderProps = {
+  company: string
+  location: string
+}
+
+const ReviewHeader = ({ company, location }: ReviewHeaderProps) => (
   <>
     <S.Title>
       Avaliações de
-      <a href="/coworking/space/bsb--brasilia">BSB Coworking</a>
-      <S.City>Brasília/DF</S.City>
+      <a href="/coworking/space/bsb--brasilia">{company}</a>
+      <S.Location>{location}</S.Location>
     </S.Title>
     <S.Divider />
     <S.Row>

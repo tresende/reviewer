@@ -7,6 +7,7 @@ type ItemProps = {
 export const Wrapper = styled.ol`
   display: flex;
   list-style: none;
+  flex-wrap: wrap;
 `
 
 const ItemModifiers = {
