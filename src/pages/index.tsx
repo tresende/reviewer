@@ -15,7 +15,7 @@ export async function getStaticProps() {
     console.warn('Api is down!')
   }
   return {
-    revalidate: 60 * 60,
+    revalidate: 60,
     props: { data }
   }
 }
