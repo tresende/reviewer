@@ -1,8 +1,5 @@
 import styled, { css, createGlobalStyle } from 'styled-components'
 
-type WrapperProps = {
-  open: boolean
-}
 export const GlobalStyle = createGlobalStyle`
   body {
     overflow:hidden
@@ -10,47 +7,23 @@ export const GlobalStyle = createGlobalStyle`
 `
 
 const WrapperModifiers = {
-  open: () => css`
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    animation: fadein 0.4s;
-    @keyframes fadein {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-  `,
   close: () => css`
-    width: 0;
-    height: 0;
     pointer-events: none;
-    animation: fadeout 0.4s;
-    opacity: 0;
-    @keyframes fadeout {
-      from {
-        opacity: 1;
-      }
-      to {
-        opacity: 0;
-      }
-    }
   `
 }
 
-export const Wrapper = styled.div<WrapperProps>`
+export const Wrapper = styled.div<{ open: boolean }>`
   ${({ theme, open }) => css`
-    position: fixed;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
     margin-right: ${theme.spacings.small};
     display: flex;
     background: rgba(0, 0, 0, 0.45);
     z-index: ${theme.layers.overlay};
     justify-content: center;
     align-items: center;
-    ${!!open && WrapperModifiers.open()};
     ${!open && WrapperModifiers.close()};
   `}
 `

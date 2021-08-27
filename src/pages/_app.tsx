@@ -4,6 +4,7 @@ import { AppProps } from 'next/dist/shared/lib/router/router'
 import theme from 'styles/theme'
 import Head from 'components/Head'
 import GlobalStyles from 'styles/global'
+import 'animate.css'
 
 const App = ({ Component, pageProps }: AppProps) => (
   <>
