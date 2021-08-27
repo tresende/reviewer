@@ -5,7 +5,9 @@ export default function Index(props: HomeProps) {
 }
 
 export async function getStaticProps() {
-  let data = []
+  let data = {
+    comments: []
+  }
   try {
     const response = await fetch(`${process.env.VERCEL_URL}/api/review`)
     data = await response.json()
