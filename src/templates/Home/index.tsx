@@ -9,7 +9,7 @@ import ReviewComments from 'components/ReviewComments'
 
 import * as S from './styles'
 
-type HomeProps = {
+export type HomeProps = {
   data: CompanyReview
 }
 
