@@ -5,8 +5,13 @@ export default function Index(props: HomeProps) {
 }
 
 export async function getStaticProps() {
-  const response = await fetch(`${process.env.VERCEL_URL}/api/review`)
-  const data = await response.json()
+  let data = []
+  try {
+    const response = await fetch(`${process.env.VERCEL_URL}/api/review`)
+    data = await response.json()
+  } catch {
+    console.warn('Api is down!')
+  }
   return {
     revalidate: 60 * 60,
     props: { data }
