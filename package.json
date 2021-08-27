@@ -18,7 +18,7 @@
     ]
   },
   "simple-git-hooks": {
-    "pre-commit": "yarn lint --fix"
+    "pre-commit": ""
   },
   "dependencies": {
     "animate.css": "^4.1.1",
