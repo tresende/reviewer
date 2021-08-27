@@ -10,10 +10,10 @@ export const Wrapper = styled.nav`
     flex-direction: column;
     background-image: url('/img/logo.png');
     background-repeat: no-repeat;
-    background-position: 8rem 0;
+    background-position: 8rem 1rem;
     padding: 0 ${theme.spacings.xsmall};
     ${media.lessThan(breakpoint)`
-      background-position: 1rem 0;
+      background-position: 1rem 1rem;
       input:checked ~ #items {
         display: block;
       }
