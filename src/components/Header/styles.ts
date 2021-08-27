@@ -8,11 +8,12 @@ export const Wrapper = styled.nav`
     display: flex;
     background-color: ${theme.colors.black};
     flex-direction: column;
+    background-image: url('/img/logo.png');
+    background-repeat: no-repeat;
+    background-position: 8rem 0;
+    padding: 0 ${theme.spacings.xsmall};
     ${media.lessThan(breakpoint)`
-      background-image:url('/img/logo.png');
-      background-repeat: no-repeat;
       background-position: 1rem 0;
-      padding: 0 ${theme.spacings.xsmall};
       input:checked ~ #items {
         display: block;
       }
@@ -25,7 +26,7 @@ export const Items = styled.div`
   align-items: center;
   ${({ theme }) => css`
     z-index: ${theme.layers.menu};
-    padding: 0 ${theme.spacings.xxxlarge};
+    padding: 0 ${theme.spacings.huge};
     ${media.lessThan(breakpoint)`
       display: none;
       padding: 0;
@@ -98,10 +99,4 @@ export const HeaderButton = styled.button<HeaderButtonProps>`
 `
 export const Subitem = styled.span`
   margin: 1rem 0;
-`
-
-export const Logo = styled.img`
-  ${media.lessThan(breakpoint)`
-     display:none;
-  `}
 `
