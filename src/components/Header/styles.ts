@@ -14,6 +14,7 @@ export const Wrapper = styled.nav`
     padding: 0 ${theme.spacings.xsmall};
     ${media.lessThan(breakpoint)`
       background-position: 1rem 1rem;
+      padding: 1rem ${theme.spacings.xsmall};
       input:checked ~ #items {
         display: block;
       }

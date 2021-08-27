@@ -14,14 +14,12 @@ const CommentComponent = ({ comment }: ButtonProps) => {
       <S.Avatar src={comment.photo} />
       <S.Comment>
         <S.CommentHeader>
-          <S.CommentInfo>
+          <div>
             <S.Name>{comment.user}</S.Name>
             <S.SmallText>Avaliação verificada • </S.SmallText>
             <S.SmallText>{formatedDate}</S.SmallText>
-          </S.CommentInfo>
-          <S.Score>
-            <Stars size={14} quantity={comment.score} />
-          </S.Score>
+          </div>
+          <Stars size={14} quantity={comment.score} />
         </S.CommentHeader>
         <S.Text>{comment.text}</S.Text>
       </S.Comment>

@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   display: flex;
@@ -12,15 +13,12 @@ export const Avatar = styled.img`
 
 export const Comment = styled.div`
   ${({ theme }) => css`
+    width: 100%;
     margin: 0 ${theme.spacings.xsmall};
     border-bottom: ${theme.border.default} #eee;
     margin-bottom: ${theme.spacings.small};
     padding-bottom: ${theme.spacings.small};
   `}
-`
-
-export const CommentInfo = styled.div`
-  ${({ theme }) => css``}
 `
 
 export const Name = styled.span`
@@ -36,6 +34,9 @@ export const SmallText = styled.span`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.xsmall};
     color: ${theme.colors.gray600};
+    ${media.lessThan('medium')`
+      display:block;
+    `}
   `}
 `
 
@@ -43,14 +44,14 @@ export const Text = styled.p`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.xsmall};
     margin-top: ${theme.spacings.xxsmall};
+    min-height: 50px;
   `}
 `
 
 export const CommentHeader = styled.div`
   display: flex;
   justify-content: space-between;
-`
-
-export const Score = styled.div`
-  ${({ theme }) => css``}
+  ${media.lessThan('medium')`
+    flex-direction: column;
+  `}
 `

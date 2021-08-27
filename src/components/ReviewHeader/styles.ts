@@ -46,7 +46,7 @@ export const Row = styled.div`
 `
 export const IconWrapper = styled.div`
   display: flex;
-  align-items: baseline;
+  align-items: center;
   flex: 4;
   margin-bottom: 1rem;
 `
