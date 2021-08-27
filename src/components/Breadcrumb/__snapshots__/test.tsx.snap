@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Breadcrumb /> should render component correctly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.c1 {
+  font-size: 1rem;
+  font-weight: 700;
+  font-weight: 400;
+}
+
+.c1::after {
+  color: #CCCCCC;
+  margin: 0 0.8rem;
+  content: '>';
+}
+
+.c2 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+<ol
+  class="c0"
+>
+  <li
+    class="c1"
+  >
+    <a
+      href="#"
+    >
+      BeerOrCoffee
+    </a>
+  </li>
+  <li
+    class="c1"
+  >
+    <a
+      href="#"
+    >
+      Coworkings Brasil
+    </a>
+  </li>
+  <li
+    class="c1"
+  >
+    <a
+      href="#"
+    >
+      BrasíS.Itema/DF
+    </a>
+  </li>
+  <li
+    class="c1"
+  >
+    Asa Sul
+  </li>
+  <li
+    class="c1"
+  >
+    <a
+      href="#"
+    >
+      BSB Coworking
+    </a>
+  </li>
+  <li
+    class="c2"
+  >
+    Avaliações
+  </li>
+</ol>
+`;
