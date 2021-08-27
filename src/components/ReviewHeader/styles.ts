@@ -39,16 +39,17 @@ export const Divider = styled.hr`
 
 export const Row = styled.div`
   display: flex;
+  align-items: center;
   justify-content: space-between;
   ${media.lessThan('medium')`
     flex-direction: column;
+    align-items: baseline;
   `}
 `
 export const IconWrapper = styled.div`
   display: flex;
   align-items: center;
   flex: 4;
-  margin-bottom: 1rem;
 `
 export const NumReview = styled.span`
   ${({ theme }) => css`
@@ -60,4 +61,8 @@ export const NumReview = styled.span`
 export const ButtonWrapper = styled.div`
   display: flex;
   flex: 2;
+  ${media.lessThan('medium')`
+    margin-top:1rem;
+    width: 100%;
+  `}
 `
