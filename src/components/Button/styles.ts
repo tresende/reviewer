@@ -23,7 +23,7 @@ export const Wrapper = styled.button<ButtonProps>`
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     font-weight: ${theme.font.bold};
     cursor: pointer;
-    ${WrapperModifiers[fillType](theme)};
+    ${fillType && WrapperModifiers[fillType](theme)};
     &:hover {
       background-color: ${lighten(0.3, theme.colors.primary)};
       color: ${darken(0.2, theme.colors.primary)};
