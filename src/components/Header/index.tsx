@@ -5,9 +5,7 @@ const Header = () => (
     <S.Icon htmlFor="hamburger">&#9776;</S.Icon>
     <S.Toggle type="checkbox" id="hamburger" />
     <S.Items id="items">
-      <S.MenuItem>
-        <img src="img/logo.png" alt="Beer Or Coffee" />
-      </S.MenuItem>
+      <S.Logo src="img/logo.png" alt="Beer Or Coffee" />
       <S.MenuItem>Espaços de Coworking</S.MenuItem>
       <S.MenuItem>Planos</S.MenuItem>
       <S.MenuItem>Descontos</S.MenuItem>
