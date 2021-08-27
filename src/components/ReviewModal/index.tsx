@@ -1,20 +1,38 @@
+import { useState } from 'react'
+
+import Button from 'components/Button'
+import Stars from 'components/Stars'
 import * as S from './styles'
 
-export type ReviewModalProps = {
-  open?: boolean
-  onClose: () => void
+type FormData = {
+  [key: string]: string | number
 }
 
-const ReviewModal = ({ onClose, open }: ReviewModalProps) => {
-  if (open === undefined) return null
+const ReviewModal = () => {
+  const [formData, setFormData] = useState<FormData>({} as FormData)
 
-  const modalClasses = `animate__animated ${!open ? 'animate__bounceOutUp' : 'animate__bounceInUp'} `
-  const backgroundClasses = `animate__animated ${!open ? 'animate__fadeOut' : 'animate__fadeIn'} `
-
+  const handleChange = (field: string, value: string | number) => {
+    setFormData({ ...formData, [field]: value })
+  }
   return (
-    <S.Wrapper open={open} onClick={onClose} className={backgroundClasses}>
-      <S.Modal className={modalClasses}>Modal {open}</S.Modal>
-      {open && <S.GlobalStyle />}
+    <S.Wrapper>
+      <S.Header>
+        <S.HeaderBackground />
+        <S.Avatar src="https://d3p07km83uit4h.cloudfront.net/portal/img/profile/avatar-blank.png?v=1051" />
+      </S.Header>
+      <S.Body>
+        <S.Title>Olá Thiago, conte para comunidade como foi sua experiência em BSB Coworking.</S.Title>
+        <Stars size={52} onClick={(index) => handleChange('score', index)} />
+        <span>Sua avaliação e comentário ajuda a comunidade ;)</span>
+        <S.Textarea
+          onChange={(e) => handleChange('text', e.currentTarget.value)}
+          placeholder="Escreva um comentário..."
+        />
+        <S.Buttons>
+          <Button fillType="solid">Envie sua avaliação</Button>
+        </S.Buttons>
+      </S.Body>
+      {JSON.stringify(formData)}
     </S.Wrapper>
   )
 }

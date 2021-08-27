@@ -4,7 +4,8 @@ export default {
     gutter: '3.2rem'
   },
   border: {
-    radius: '0.4rem',
+    smallRadius: '0.4rem',
+    mediumRadius: '0.8rem',
     default: '1px solid'
   },
   font: {

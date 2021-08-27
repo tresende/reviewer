@@ -11,7 +11,7 @@ export const Container = styled.div`
   ${({ theme }) => css`
     padding: ${theme.spacings.medium};
     margin-top: ${theme.spacings.xsmall};
-    border-radius: ${theme.border.radius};
+    border-radius: ${theme.border.smallRadius};
     border: ${theme.border.default};
     border-color: ${theme.colors.gray300};
     background-color: ${theme.colors.white};

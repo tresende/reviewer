@@ -6,3 +6,9 @@ export const Wrapper = styled.div`
     margin-right: ${theme.spacings.small};
   `}
 `
+
+export const Button = styled.button`
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+`

@@ -1,18 +1,29 @@
-import styled, { css } from 'styled-components'
+import styled, { css, DefaultTheme } from 'styled-components'
 import { darken, lighten } from 'polished'
+import { ButtonProps } from '.'
 
-export const Wrapper = styled.button`
-  ${({ theme }) => css`
+const WrapperModifiers = {
+  outline: (theme: DefaultTheme) => css`
+    background: ${theme.colors.white};
+    color: ${theme.colors.primary};
+  `,
+  solid: (theme: DefaultTheme) => css`
+    color: ${theme.colors.white};
+    background: ${theme.colors.primary};
+  `
+}
+
+export const Wrapper = styled.button<ButtonProps>`
+  ${({ theme, fillType }) => css`
     padding: 0.6rem 1.2rem;
     width: 100%;
-    border-radius: ${theme.border.radius};
-    background: ${theme.colors.white};
+    border-radius: ${theme.border.smallRadius};
     border: ${theme.border.default} ${theme.colors.primary};
-    color: ${theme.colors.primary};
     font-size: ${theme.font.sizes.large};
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     font-weight: ${theme.font.bold};
     cursor: pointer;
+    ${WrapperModifiers[fillType](theme)};
     &:hover {
       background-color: ${lighten(0.3, theme.colors.primary)};
       color: ${darken(0.2, theme.colors.primary)};

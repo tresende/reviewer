@@ -4,8 +4,13 @@ import * as S from './styles'
 
 export type ButtonProps = {
   children: React.ReactNode
+  fillType?: 'outline' | 'solid'
 } & ButtonHTMLAttributes<HTMLButtonElement>
 
-const Button = ({ children, ...props }: ButtonProps) => <S.Wrapper {...props}>{children}</S.Wrapper>
+const Button = ({ children, fillType = 'outline', ...props }: ButtonProps) => (
+  <S.Wrapper fillType={fillType} {...props}>
+    {children}
+  </S.Wrapper>
+)
 
 export default Button

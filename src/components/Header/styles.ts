@@ -69,7 +69,7 @@ export const Icon = styled.label`
     background-color: ${theme.colors.primary};
     margin: ${theme.spacings.xxsmall};
     padding: ${theme.spacings.xxsmall};
-    border-radius: ${theme.border.radius};
+    border-radius: ${theme.border.smallRadius};
   `}
 
   ${media.lessThan(breakpoint)`

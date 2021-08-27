@@ -1,5 +1,6 @@
 import { useState } from 'react'
 
+import Modal from 'components/Modal'
 import Header from 'components/Header'
 import ReviewModal from 'components/ReviewModal'
 import CompanyReview from 'models/CompanyReview'
@@ -13,7 +14,7 @@ type HomeProps = {
 }
 
 const Home = ({ data }: HomeProps) => {
-  const [openModal, setOpenModal] = useState<boolean>()
+  const [openModal, setOpenModal] = useState<boolean>(true)
   return (
     <>
       <Header />
@@ -27,7 +28,9 @@ const Home = ({ data }: HomeProps) => {
           <ReviewComments comments={data.comments} />
         </S.Container>
       </S.Content>
-      <ReviewModal open={openModal} onClose={() => setOpenModal(false)} />
+      <Modal open={openModal} onClose={() => setOpenModal(false)}>
+        <ReviewModal />
+      </Modal>
     </>
   )
 }
