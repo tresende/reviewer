@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.div``
 
@@ -38,6 +39,11 @@ export const Body = styled.div`
     height: 36rem;
     justify-content: space-between;
     padding: ${theme.spacings.medium};
+    ${media.lessThan('small')`
+      padding-bottom: 0;
+      height: 40rem;
+
+    `}
   `}
 `
 
