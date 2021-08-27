@@ -9,11 +9,11 @@ export const Wrapper = styled.section`
 
 export const Container = styled.div`
   ${({ theme }) => css`
-    width: 100%;
-    padding: 3rem;
-    margin-top: 1rem;
+    padding: ${theme.spacings.medium};
+    margin-top: ${theme.spacings.xsmall};
     border-radius: ${theme.border.radius};
-    border: ${theme.border.default} ${theme.colors.gray300};
+    border: ${theme.border.default};
+    border-color: ${theme.colors.gray300};
     background-color: ${theme.colors.white};
   `}
 `

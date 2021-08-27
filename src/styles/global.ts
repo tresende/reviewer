@@ -103,6 +103,14 @@ const GlobalStyles: GlobalStyleComponent<null, DefaultTheme> = createGlobalStyle
     p {
       line-height: 2rem;
     }
+
+    a {
+      text-decoration: none;
+      color: ${theme.colors.primary};
+    }
+    a:hover {
+      text-decoration: underline;
+    }
   `}
 `
 

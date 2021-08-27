@@ -1,14 +1,18 @@
 import * as S from './styles'
 
 export type ReviewModalProps = {
-  open?: boolean
+  open: boolean
   onClose: () => void
 }
 
-const ReviewModal = ({ onClose, open = false }: ReviewModalProps) => (
+const ReviewModal = ({ onClose, open }: ReviewModalProps) => (
   <S.Wrapper onClick={onClose} open={open}>
-    <S.Modal>Modal {open}</S.Modal>
-    {open && <S.GlobalStyle />}
+    {open && (
+      <>
+        <S.Modal>Modal {open}</S.Modal>
+        <S.GlobalStyle />
+      </>
+    )}
   </S.Wrapper>
 )
 

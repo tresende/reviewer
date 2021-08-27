@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import Header from 'components/Header'
 import ReviewModal from 'components/ReviewModal'
 import CompanyReview from 'models/CompanyReview'
@@ -5,7 +7,6 @@ import ReviewHeader from 'components/ReviewHeader'
 import ReviewComments from 'components/ReviewComments'
 
 import * as S from './styles'
-import { useState } from 'react'
 
 type HomeProps = {
   data: CompanyReview
@@ -13,27 +14,21 @@ type HomeProps = {
 
 const Home = ({ data }: HomeProps) => {
   const [openModal, setOpenModal] = useState(false)
-
-  const onReview = () => setOpenModal(true)
-  const onCloseModal = () => setOpenModal(false)
-
   return (
-    <S.Wrapper>
-      <S.Menu>
-        <Header />
-      </S.Menu>
+    <>
+      <Header />
       <S.Container>
-        <S.Main>
-          <ReviewHeader {...data} onReview={onReview} />
-        </S.Main>
+        <S.Header>
+          <ReviewHeader {...data} onReview={() => setOpenModal(true)} />
+        </S.Header>
       </S.Container>
       <S.Content>
         <S.Container>
           <ReviewComments comments={data.comments} />
         </S.Container>
       </S.Content>
-      <ReviewModal open={openModal} onClose={onCloseModal} />
-    </S.Wrapper>
+      <ReviewModal open={openModal} onClose={() => setOpenModal(false)} />
+    </>
   )
 }
 

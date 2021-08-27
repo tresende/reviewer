@@ -5,17 +5,6 @@ export const Title = styled.h1`
   ${({ theme }) => css`
     color: ${theme.colors.gray500};
     font-size: ${theme.font.sizes.xxlarge};
-    a {
-      color: ${theme.colors.primary};
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-      &::before,
-      &::after {
-        content: ' ';
-      }
-    }
   `}
 `
 
@@ -24,8 +13,8 @@ export const Location = styled.span`
     font-size: ${theme.font.sizes.large};
     font-weight: ${theme.font.normal};
     ${media.lessThan('small')`
-        display: block;
-      `}
+      display: block;
+    `}
   `}
 `
 
@@ -33,7 +22,8 @@ export const Divider = styled.hr`
   ${({ theme }) => css`
     border: 0;
     margin: 1rem 0;
-    border-top: ${theme.border.default} ${theme.colors.gray100};
+    border-top: ${theme.border.default};
+    border-color: ${theme.colors.gray100};
   `}
 `
 
@@ -46,11 +36,13 @@ export const Row = styled.div`
     align-items: baseline;
   `}
 `
+
 export const IconWrapper = styled.div`
   display: flex;
   align-items: center;
   flex: 4;
 `
+
 export const NumReview = styled.span`
   ${({ theme }) => css`
     font-weight: ${theme.font.bold};

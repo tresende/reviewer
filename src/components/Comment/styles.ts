@@ -15,9 +15,18 @@ export const Comment = styled.div`
   ${({ theme }) => css`
     width: 100%;
     margin: 0 ${theme.spacings.xsmall};
-    border-bottom: ${theme.border.default} #eee;
+    border-bottom: ${theme.border.default};
+    border-color: ${theme.colors.gray100};
     margin-bottom: ${theme.spacings.small};
     padding-bottom: ${theme.spacings.small};
+  `}
+`
+
+export const CommentHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  ${media.lessThan('medium')`
+    flex-direction: column;
   `}
 `
 
@@ -45,13 +54,5 @@ export const Text = styled.p`
     font-size: ${theme.font.sizes.xsmall};
     margin-top: ${theme.spacings.xxsmall};
     min-height: 50px;
-  `}
-`
-
-export const CommentHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-  ${media.lessThan('medium')`
-    flex-direction: column;
   `}
 `

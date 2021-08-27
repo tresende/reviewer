@@ -1,7 +1,7 @@
 import styled, { css, createGlobalStyle } from 'styled-components'
 
 type WrapperProps = {
-  open?: boolean
+  open: boolean
 }
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -12,6 +12,8 @@ export const GlobalStyle = createGlobalStyle`
 const WrapperModifiers = {
   open: () => css`
     display: flex;
+    width: 100%;
+    height: 100vh;
     animation: fadein 0.4s;
     @keyframes fadein {
       from {
@@ -23,6 +25,8 @@ const WrapperModifiers = {
     }
   `,
   close: () => css`
+    width: 0;
+    height: 0;
     pointer-events: none;
     animation: fadeout 0.4s;
     opacity: 0;
@@ -39,8 +43,6 @@ const WrapperModifiers = {
 
 export const Wrapper = styled.div<WrapperProps>`
   ${({ theme, open }) => css`
-    width: 100%;
-    height: 100vh;
     position: fixed;
     margin-right: ${theme.spacings.small};
     display: flex;
@@ -48,7 +50,7 @@ export const Wrapper = styled.div<WrapperProps>`
     z-index: ${theme.layers.overlay};
     justify-content: center;
     align-items: center;
-    ${open && WrapperModifiers.open()};
+    ${!!open && WrapperModifiers.open()};
     ${!open && WrapperModifiers.close()};
   `}
 `

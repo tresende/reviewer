@@ -1,4 +1,5 @@
 import Star from './star'
+import { SCORE_LABEL, MAX_RATING } from 'utilts/constants'
 
 import * as S from './styles'
 
@@ -7,16 +8,12 @@ export type StarsProps = {
   size?: number
 }
 
-const MAX_RATING = 5
-
 const Stars = ({ quantity = 1, size = 28 }: StarsProps) => {
   const solid = [...Array(quantity)]
   const outline = [...Array(MAX_RATING - quantity)]
 
-  const titleMap = ['Péssimo', 'Ruim', 'Mediano', 'Bom', 'Perfeito']
-
   return (
-    <S.Wrapper title={titleMap[quantity - 1]}>
+    <S.Wrapper title={SCORE_LABEL[quantity - 1]}>
       {solid.map((_, i) => (
         <Star key={i} size={size} />
       ))}
