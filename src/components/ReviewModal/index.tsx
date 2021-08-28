@@ -1,4 +1,4 @@
-import Body from './body'
+import ModalBody from './modalBody'
 import { save } from 'services/review'
 import UserReview from 'models/UserReview'
 import { useLoading } from 'hooks/use-loading'
@@ -26,7 +26,7 @@ const ReviewModal = () => {
         <S.HeaderBackground />
         <S.Avatar src="https://d3p07km83uit4h.cloudfront.net/portal/img/profile/avatar-blank.png?v=1051" />
       </S.Header>
-      <Body handleSubmit={handleSubmit} />
+      <ModalBody handleSubmit={handleSubmit} />
     </S.Wrapper>
   )
 }
