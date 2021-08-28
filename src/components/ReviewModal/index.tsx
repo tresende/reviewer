@@ -1,4 +1,5 @@
 import ModalBody from './modalBody'
+import { save } from 'services/Review'
 import UserReview from 'models/UserReview'
 import { useLoading } from 'hooks/use-loading'
 import { shareOnTwitter } from 'services/SocialMedia'
@@ -11,17 +12,18 @@ export type ReviewModalProps = {
 
 const ReviewModal = ({ onSave }: ReviewModalProps) => {
   const loading = useLoading()
+  const text = 'Aguarde seu comentário está sendo enviado 🚀🚀🚀'
 
   const handleSubmit = async (data: UserReview) => {
     try {
-      const text = 'Aguarde seu comentário está sendo enviado 🚀🚀🚀'
       loading.start(text)
-      data.twitter && shareOnTwitter()
-      onSave && onSave()
+      await save(data)
     } catch (error) {
-      console?.warn(error)
+      console.warn(error)
     } finally {
       loading.stop()
+      onSave && onSave()
+      data.twitter && shareOnTwitter()
     }
   }
 

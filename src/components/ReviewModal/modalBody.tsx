@@ -10,13 +10,13 @@ import * as S from './styles'
 type BodyProps = {
   handleSubmit: (data: UserReview) => void
 }
-const INITIAL_STATE = { score: DEFAULT_SCORE, text: '' } as UserReview
+const INITIAL_STATE = { score: DEFAULT_SCORE, text: '', twitter: false } as UserReview
 
 const Body = ({ handleSubmit }: BodyProps) => {
   const [formData, setFormData] = useState<UserReview>(INITIAL_STATE)
   const [formEnable, setFormEnable] = useState(false)
 
-  const handleChange = (field: string, value: string | number) => {
+  const handleChange = (field: string, value: string | number | boolean) => {
     const data = { ...formData, [field]: value }
     setFormData(data)
     setFormEnable(data?.text.length >= MIN_TEXT_LENGTH)
@@ -35,12 +35,18 @@ const Body = ({ handleSubmit }: BodyProps) => {
       <Stars quantity={formData.score} size={52} onClick={(index) => handleChange('score', index)} />
       <span>Sua avaliação e comentário ajuda a comunidade ;)</span>
       <S.Textarea
+        value={formData.text}
         maxLength={280}
         onChange={(e) => handleChange('text', e.currentTarget.value)}
         placeholder="Escreva um comentário..."
       />
       <S.SocialMedia>
-        <input id="twitter" type="checkbox" onChange={(e) => handleChange('twitter', e.currentTarget.value)} />
+        <input
+          checked={formData.twitter}
+          id="twitter"
+          type="checkbox"
+          onChange={(e) => handleChange('twitter', e.target.checked)}
+        />
         <label htmlFor="twitter"> Desejo compartilhar no twitter 📢</label>
       </S.SocialMedia>
       <div>

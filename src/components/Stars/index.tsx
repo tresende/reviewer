@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import Star from './star'
 import { SCORE_LABEL, MAX_RATING } from 'utils/constants'
@@ -13,6 +13,9 @@ export type StarsProps = {
 
 const Stars = ({ quantity = 1, size = 28, onClick }: StarsProps) => {
   const [selected, setSelected] = useState(quantity)
+  useEffect(() => {
+    setSelected(quantity)
+  }, [quantity])
 
   const handleClick = (index: number) => {
     if (!onClick) return

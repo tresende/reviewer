@@ -1,7 +1,10 @@
-import ReviewModal from '.'
-import { StarProps } from 'components/Stars/star'
-import { render, screen } from 'utils/test-utils'
 import userEvent from '@testing-library/user-event'
+
+import ReviewModal from '.'
+import * as ReviewService from 'services/Review'
+import * as SocialMediaService from 'services/SocialMedia'
+import { StarProps } from 'components/Stars/star'
+import { render, screen, waitFor } from 'utils/test-utils'
 
 jest.mock('components/Stars/star', () => ({
   __esModule: true,
@@ -9,8 +12,6 @@ jest.mock('components/Stars/star', () => ({
     return <div onClick={props.onClick} data-testid={`star-${props.outline ? 'outline' : 'solid'}`} />
   }
 }))
-
-jest.mock('services/SocialMedia')
 
 describe('<ReviewModal />', () => {
   it('should render component correctly', () => {
@@ -28,7 +29,7 @@ describe('<ReviewModal />', () => {
     expect(onSave).toBeCalledTimes(0)
   })
 
-  it('shouldnt call service when text < 5 caracteres or more', async () => {
+  it('should call service when text < 5 caracteres or more', async () => {
     const onSave = jest.fn()
     render(<ReviewModal onSave={onSave} />)
 
@@ -36,19 +37,30 @@ describe('<ReviewModal />', () => {
     await userEvent.type(screen.getByRole('textbox'), '12345')
     await userEvent.click(screen.getByRole('checkbox'))
     screen.getByRole('button', { name: /Envie sua avaliação/i }).click()
-    expect(onSave).toBeCalledTimes(1)
+
+    waitFor(() => {
+      expect(onSave).toBeCalledTimes(1)
+    })
   })
 
-  it('shouldnt log error when api is down', async () => {
+  it('should log error when api is down', async () => {
+    const onSave = jest.fn()
     console.warn = jest.fn()
-    const onSave = () => {
+    const socialMediaServiceMock = jest.spyOn(SocialMediaService, 'shareOnTwitter')
+
+    const reviewService = jest.spyOn(ReviewService, 'save')
+    reviewService.mockImplementation(() => {
       throw new Error('FAKE ERROR')
-    }
+    })
 
     render(<ReviewModal onSave={onSave} />)
-
     await userEvent.type(screen.getByRole('textbox'), 'FAIL TEST')
+    await userEvent.click(screen.getByRole('checkbox'))
     screen.getByRole('button', { name: /Envie sua avaliação/i }).click()
-    expect(console.warn).toBeCalledTimes(1)
+
+    waitFor(() => {
+      expect(console.warn).toBeCalledTimes(1)
+      expect(socialMediaServiceMock).toBeCalledTimes(1)
+    })
   })
 })

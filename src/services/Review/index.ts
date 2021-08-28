@@ -1,11 +1,12 @@
 import Config from 'config/api'
 import UserReview from 'models/UserReview'
+import { timeout } from 'utils/timer'
 
 const save = async (data: UserReview) => {
-  await fetch(`${Config.API_URL}/api/review`, {
+  await timeout(3000) //fake slow api
+  await fetch(`${Config.API_URL}/review.json`, {
     method: 'POST',
     headers: {
-      Accept: 'application/json',
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(data)

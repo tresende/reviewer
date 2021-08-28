@@ -13,9 +13,9 @@ describe('Sreview Service', () => {
     }
     await save(data)
     expect(mock).toBeCalledTimes(1)
-    expect(mock).toBeCalledWith('http://thiagoresende.dev/api/review', {
+    expect(mock).toBeCalledWith('https://borc-9faa2-default-rtdb.firebaseio.com/review.json', {
       body: '{"score":1,"text":"text","twitter":false}',
-      headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json' },
       method: 'POST'
     })
   })
