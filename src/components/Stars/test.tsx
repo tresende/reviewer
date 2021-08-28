@@ -24,7 +24,7 @@ describe('<Stars />', () => {
   it('should execute callback on click in star', () => {
     const onClick = jest.fn()
     render(<Stars onClick={onClick} />)
-    screen.getByTestId('star-solid').click()
+    screen.getAllByTestId('star-outline')[0].click()
     expect(onClick).toBeCalledTimes(1)
   })
 

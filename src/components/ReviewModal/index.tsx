@@ -1,20 +1,25 @@
 import ModalBody from './modalBody'
-import { save } from 'services/review'
 import UserReview from 'models/UserReview'
 import { useLoading } from 'hooks/use-loading'
+import { shareOnTwitter } from 'services/SocialMedia'
 
 import * as S from './styles'
 
-const ReviewModal = () => {
+export type ReviewModalProps = {
+  onSave?: () => void
+}
+
+const ReviewModal = ({ onSave }: ReviewModalProps) => {
   const loading = useLoading()
 
   const handleSubmit = async (data: UserReview) => {
     try {
       const text = 'Aguarde seu comentário está sendo enviado 🚀🚀🚀'
       loading.start(text)
-      await save(data)
+      data.twitter && shareOnTwitter()
+      onSave && onSave()
     } catch (error) {
-      console.warn(error)
+      console?.warn(error)
     } finally {
       loading.stop()
     }
@@ -24,7 +29,7 @@ const ReviewModal = () => {
     <S.Wrapper>
       <S.Header>
         <S.HeaderBackground />
-        <S.Avatar src="https://d3p07km83uit4h.cloudfront.net/portal/img/profile/avatar-blank.png?v=1051" />
+        <S.Avatar src="/img/avatar-blank.png" alt="avatar" />
       </S.Header>
       <ModalBody handleSubmit={handleSubmit} />
     </S.Wrapper>

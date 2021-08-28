@@ -36,13 +36,11 @@ export const Body = styled.div`
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: 36rem;
+    min-height: 40rem;
     justify-content: space-between;
     padding: ${theme.spacings.medium};
     ${media.lessThan('small')`
       padding-bottom: 0;
-      height: 40rem;
-
     `}
   `}
 `
@@ -57,6 +55,8 @@ export const Title = styled.span`
   `}
 `
 
+export const SocialMedia = styled.div``
+
 export const Textarea = styled.textarea`
   ${({ theme }) => css`
     width: 100%;
@@ -65,5 +65,3 @@ export const Textarea = styled.textarea`
     border-radius: ${theme.border.smallRadius};
   `}
 `
-
-export const Buttons = styled.div``

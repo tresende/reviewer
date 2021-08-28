@@ -7,7 +7,7 @@ const Loading = () => {
   return (
     <S.Wrapper>
       {text}
-      <S.Logo src="/img/borc-logo-transparente.png" />
+      <S.Logo src="/img/borc-logo-transparente.png" alt="logo" />
     </S.Wrapper>
   )
 }

@@ -24,7 +24,7 @@ exports[`<Comment /> should render component correctly with mocked parameters 1`
 
 .c1 {
   border-radius: 50%;
-  height: 48px;
+  max-height: 48px;
   width: 48px;
 }
 
@@ -84,6 +84,7 @@ exports[`<Comment /> should render component correctly with mocked parameters 1`
   class="c0"
 >
   <img
+    alt="avatar"
     class="c1"
     src=""
   />
@@ -115,6 +116,7 @@ exports[`<Comment /> should render component correctly with mocked parameters 1`
         title="Mediano"
       >
         <button
+          aria-label="star"
           class="c7"
         >
           <svg
@@ -134,6 +136,7 @@ exports[`<Comment /> should render component correctly with mocked parameters 1`
           </svg>
         </button>
         <button
+          aria-label="star"
           class="c7"
         >
           <svg
@@ -153,6 +156,7 @@ exports[`<Comment /> should render component correctly with mocked parameters 1`
           </svg>
         </button>
         <button
+          aria-label="star"
           class="c7"
         >
           <svg
@@ -172,6 +176,7 @@ exports[`<Comment /> should render component correctly with mocked parameters 1`
           </svg>
         </button>
         <button
+          aria-label="star"
           class="c7"
         >
           <svg
@@ -191,6 +196,7 @@ exports[`<Comment /> should render component correctly with mocked parameters 1`
           </svg>
         </button>
         <button
+          aria-label="star"
           class="c7"
         >
           <svg

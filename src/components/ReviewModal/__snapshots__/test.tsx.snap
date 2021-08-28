@@ -74,7 +74,7 @@ exports[`<ReviewModal /> should render component correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   text-align: center;
-  height: 36rem;
+  min-height: 40rem;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -101,7 +101,6 @@ exports[`<ReviewModal /> should render component correctly 1`] = `
 @media (max-width:450px) {
   .c3 {
     padding-bottom: 0;
-    height: 40rem;
   }
 }
 
@@ -115,8 +114,9 @@ exports[`<ReviewModal /> should render component correctly 1`] = `
       class="c1"
     />
     <img
+      alt="avatar"
       class="c2"
-      src="https://d3p07km83uit4h.cloudfront.net/portal/img/profile/avatar-blank.png?v=1051"
+      src="/img/avatar-blank.png"
     />
   </div>
   <div
@@ -166,6 +166,17 @@ exports[`<ReviewModal /> should render component correctly 1`] = `
     <div
       class=""
     >
+      <input
+        id="twitter"
+        type="checkbox"
+      />
+      <label
+        for="twitter"
+      >
+         Desejo compartilhar no twitter 📢
+      </label>
+    </div>
+    <div>
       <button
         class="c7"
         disabled=""

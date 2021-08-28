@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
 
 export const Avatar = styled.img`
   border-radius: 50%;
-  height: 48px;
+  max-height: 48px;
   width: 48px;
 `
 

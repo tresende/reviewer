@@ -10,9 +10,10 @@ import * as S from './styles'
 type BodyProps = {
   handleSubmit: (data: UserReview) => void
 }
+const INITIAL_STATE = { score: DEFAULT_SCORE, text: '' } as UserReview
 
 const Body = ({ handleSubmit }: BodyProps) => {
-  const [formData, setFormData] = useState<UserReview>({ score: DEFAULT_SCORE, text: '' } as UserReview)
+  const [formData, setFormData] = useState<UserReview>(INITIAL_STATE)
   const [formEnable, setFormEnable] = useState(false)
 
   const handleChange = (field: string, value: string | number) => {
@@ -21,7 +22,10 @@ const Body = ({ handleSubmit }: BodyProps) => {
     setFormEnable(data?.text.length >= MIN_TEXT_LENGTH)
   }
 
-  const onSave = () => handleSubmit(formData)
+  const onSave = () => {
+    handleSubmit(formData)
+    setFormData(INITIAL_STATE)
+  }
 
   return (
     <S.Body>
@@ -35,11 +39,15 @@ const Body = ({ handleSubmit }: BodyProps) => {
         onChange={(e) => handleChange('text', e.currentTarget.value)}
         placeholder="Escreva um comentário..."
       />
-      <S.Buttons onClick={onSave}>
-        <Button disabled={!formEnable} fillType="solid">
+      <S.SocialMedia>
+        <input id="twitter" type="checkbox" onChange={(e) => handleChange('twitter', e.currentTarget.value)} />
+        <label htmlFor="twitter"> Desejo compartilhar no twitter 📢</label>
+      </S.SocialMedia>
+      <div>
+        <Button onClick={onSave} disabled={!formEnable} fillType="solid">
           Envie sua avaliação
         </Button>
-      </S.Buttons>
+      </div>
     </S.Body>
   )
 }

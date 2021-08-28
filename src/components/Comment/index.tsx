@@ -10,7 +10,7 @@ export type ButtonProps = {
 
 const CommentComponent = ({ comment }: ButtonProps) => (
   <S.Wrapper>
-    <S.Avatar src={comment.photo} />
+    <S.Avatar src={comment.photo} alt="avatar" />
     <S.Comment>
       <S.CommentHeader>
         <div>

@@ -14,6 +14,10 @@ export type HomeProps = {
 }
 
 const Home = ({ data }: HomeProps) => {
+  const close = () => {
+    setOpenModal(false)
+  }
+
   const [openModal, setOpenModal] = useState<boolean>(true)
   return (
     <>
@@ -28,8 +32,8 @@ const Home = ({ data }: HomeProps) => {
           <ReviewComments comments={data.comments} />
         </S.Container>
       </S.Content>
-      <Modal open={openModal} onClose={() => setOpenModal(false)}>
-        <ReviewModal />
+      <Modal open={openModal} onClose={close}>
+        <ReviewModal onSave={close} />
       </Modal>
     </>
   )

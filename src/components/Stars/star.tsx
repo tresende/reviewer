@@ -13,7 +13,11 @@ export type StarProps = {
 const Star = ({ onClick, outline, size }: StarProps) => {
   const props = { color: theme.colors.yellow, size }
 
-  return <S.Button onClick={onClick}>{outline ? <FaRegStar {...props} /> : <FaStar {...props} />}</S.Button>
+  return (
+    <S.Button aria-label="star" onClick={onClick}>
+      {outline ? <FaRegStar {...props} /> : <FaStar {...props} />}
+    </S.Button>
+  )
 }
 
 export default Star

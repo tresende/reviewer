@@ -1,0 +1,225 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> should open modal 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #222222;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-image: url('/img/logo.png');
+  background-repeat: no-repeat;
+  background-position: 8rem 1rem;
+  padding: 0 1.6rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 20;
+  padding: 0 14rem;
+}
+
+.c4 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  font-family: 'Montserrat';
+  font-size: 1.4rem;
+  font-weight: 700;
+  background-color: #222222;
+  z-index: 20;
+  padding: 0.8rem 0;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.c2 {
+  display: none;
+}
+
+.c1 {
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  display: none;
+  background-color: #FABA40;
+  margin: 0.8rem;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+}
+
+.c5 {
+  border: 2px solid #FABA40;
+  color: #FABA40;
+  background-color: transparent;
+  padding: 1.6rem;
+  border-radius: 30px;
+  font-weight: 700;
+}
+
+.c7 {
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
+  background-color: transparent;
+  padding: 1.6rem;
+  border-radius: 30px;
+  font-weight: 700;
+}
+
+.c6 {
+  margin: 1rem 0;
+}
+
+@media (max-width:1170px) {
+  .c0 {
+    background-position: 1rem 1rem;
+    padding: 1rem 1.6rem;
+  }
+
+  .c0 input:checked ~ #items {
+    display: block;
+  }
+}
+
+@media (max-width:1170px) {
+  .c3 {
+    display: none;
+    padding: 0;
+    text-align: left;
+  }
+}
+
+@media (max-width:1170px) {
+  .c4 {
+    border-bottom: 1px solid #4b4b4b;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:1170px) {
+  .c1 {
+    display: block;
+    color: white;
+    font-style: normal;
+  }
+}
+
+@media (max-width:1170px) {
+  .c5 {
+    width: 100%;
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width:1170px) {
+  .c7 {
+    width: 100%;
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width:768px) {
+
+}
+
+@media (max-width:768px) {
+
+}
+
+@media (max-width:768px) {
+
+}
+
+@media (min-width:1200px) {
+
+}
+
+@media (min-width:992px) {
+
+}
+
+<nav
+  class="c0"
+>
+  <label
+    class="c1"
+    for="hamburger"
+  >
+    ☰
+  </label>
+  <input
+    class="c2"
+    id="hamburger"
+    type="checkbox"
+  />
+  <div
+    class="c3"
+    id="items"
+  >
+    <div
+      class="c4"
+    >
+      Espaços de Coworking
+    </div>
+    <div
+      class="c4"
+    >
+      Planos
+    </div>
+    <div
+      class="c4"
+    >
+      Descontos
+    </div>
+    <div
+      class="c4"
+      style="flex: 3;"
+    >
+      <button
+        class="c5"
+      >
+        Adiquirir um Plano
+      </button>
+      <span
+        class="c6"
+      >
+        Empresas
+      </span>
+      <button
+        class="c7"
+        color="white"
+      >
+        Oi, Thiago
+      </button>
+    </div>
+  </div>
+</nav>
+`;

@@ -26,6 +26,7 @@ describe('<Modal />', () => {
     const { container } = render(<Modal onClose={onClose} open />)
     expect(container.firstChild?.firstChild).toHaveClass('animate__bounceInUp')
     expect(container.firstChild).toHaveClass('animate__fadeIn')
+    expect(container.firstChild).toMatchSnapshot()
   })
 
   it('should add fadeOut and bounceOut classes', () => {
@@ -33,5 +34,6 @@ describe('<Modal />', () => {
     const { container } = render(<Modal onClose={onClose} open={false} />)
     expect(container.firstChild?.firstChild).toHaveClass('animate__bounceOutUp')
     expect(container.firstChild).toHaveClass('animate__fadeOut')
+    expect(container.firstChild).toMatchSnapshot()
   })
 })

@@ -15,3 +15,5 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 .vercel
+public/sw.*
+public/workbox-*.map
