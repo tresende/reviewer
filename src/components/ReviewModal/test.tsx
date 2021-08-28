@@ -3,6 +3,8 @@ import userEvent from '@testing-library/user-event'
 import ReviewModal from '.'
 import * as ReviewService from 'services/Review'
 import * as SocialMediaService from 'services/SocialMedia'
+import * as Timer from 'utils/timer'
+
 import { StarProps } from 'components/Stars/star'
 import { render, screen, waitFor } from 'utils/test-utils'
 
@@ -45,9 +47,9 @@ describe('<ReviewModal />', () => {
 
   it('should log error when api is down', async () => {
     const onSave = jest.fn()
-    console.warn = jest.fn()
     const socialMediaServiceMock = jest.spyOn(SocialMediaService, 'shareOnTwitter')
-
+    const TimerMock = jest.spyOn(Timer, 'timeout')
+    TimerMock.mockImplementation(jest.fn())
     const reviewService = jest.spyOn(ReviewService, 'save')
     reviewService.mockImplementation(() => {
       throw new Error('FAKE ERROR')
@@ -59,7 +61,7 @@ describe('<ReviewModal />', () => {
     screen.getByRole('button', { name: /Envie sua avaliação/i }).click()
 
     waitFor(() => {
-      expect(console.warn).toBeCalledTimes(1)
+      expect(screen.findByText('Ocorreu um erro!')).toBeInTheDocument()
       expect(socialMediaServiceMock).toBeCalledTimes(1)
     })
   })

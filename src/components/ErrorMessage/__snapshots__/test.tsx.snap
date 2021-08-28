@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ErrorMessage /> should render component correctly 1`] = `
+.c1 {
+  position: absolute;
+  max-width: 24rem;
+  top: 5rem;
+  left: 4rem;
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.c2 {
+  background-image: url('/img/error.png');
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+@media (max-width:450px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width:450px) {
+  .c1 {
+    max-width: 100%;
+    position: initial;
+  }
+}
+
+<div
+  class="c0"
+>
+  <span
+    class="c1"
+  >
+    Ocorreu um erro!
+    <br />
+    Tente novamente mais tarde
+  </span>
+  <img
+    class="c2"
+    src="/img/error.png"
+  />
+</div>
+`;
