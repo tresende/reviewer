@@ -1,4 +1,4 @@
-import { render } from 'utilts/test-utils'
+import { render } from 'utils/test-utils'
 import Breadcrumb from '.'
 
 describe('<Breadcrumb />', () => {

@@ -1,6 +1,6 @@
 import Stars from 'components/Stars'
 import Comment from 'models/Comment'
-import { toPTBRFormat } from 'utilts/date'
+import { toPTBRFormat } from 'utils/date'
 
 import * as S from './styles'
 

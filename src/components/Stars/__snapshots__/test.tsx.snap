@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Stars /> <Star /> should render component correctly 1`] = `
+<div
+  data-testid="star-solid"
+/>
+`;
+
+exports[`<Stars /> should render component correctly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 2.4rem;
+}
+
+<div
+  class="c0"
+  title="Péssimo"
+>
+  <div
+    data-testid="star-solid"
+  />
+  <div
+    data-testid="star-outline"
+  />
+  <div
+    data-testid="star-outline"
+  />
+  <div
+    data-testid="star-outline"
+  />
+  <div
+    data-testid="star-outline"
+  />
+</div>
+`;

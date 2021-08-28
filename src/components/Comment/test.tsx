@@ -1,4 +1,4 @@
-import { render, screen } from 'utilts/test-utils'
+import { render, screen } from 'utils/test-utils'
 import Comment from 'models/Comment'
 import Component from '.'
 

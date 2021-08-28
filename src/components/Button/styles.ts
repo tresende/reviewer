@@ -10,11 +10,17 @@ const WrapperModifiers = {
   solid: (theme: DefaultTheme) => css`
     color: ${theme.colors.white};
     background: ${theme.colors.primary};
+  `,
+  disabled: () => css`
+    &:disabled {
+      cursor: not-allowed;
+      filter: saturate(30%);
+    }
   `
 }
 
 export const Wrapper = styled.button<ButtonProps>`
-  ${({ theme, fillType }) => css`
+  ${({ theme, fillType, disabled }) => css`
     padding: 0.6rem 1.2rem;
     width: 100%;
     border-radius: ${theme.border.smallRadius};
@@ -24,9 +30,13 @@ export const Wrapper = styled.button<ButtonProps>`
     font-weight: ${theme.font.bold};
     cursor: pointer;
     ${fillType && WrapperModifiers[fillType](theme)};
-    &:hover {
-      background-color: ${lighten(0.3, theme.colors.primary)};
-      color: ${darken(0.2, theme.colors.primary)};
-    }
+    ${disabled && WrapperModifiers.disabled()};
+    ${!disabled &&
+    css`
+      &:hover {
+        background-color: ${lighten(0.3, theme.colors.primary)};
+        color: ${darken(0.2, theme.colors.primary)};
+      }
+    `}
   `}
 `

@@ -1,4 +1,4 @@
-export default interface CompanyReview {
+export default interface Comment {
   user: string
   photo: string
   text: string

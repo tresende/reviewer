@@ -95,6 +95,10 @@ const GlobalStyles: GlobalStyleComponent<null, DefaultTheme> = createGlobalStyle
       font-size: 62.5%;
     }
 
+    ::selection {
+      background: ${theme.colors.primary};
+    }
+
     body {
       font-family: ${theme.font.family};
       font-size: ${theme.font.sizes.medium};

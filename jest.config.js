@@ -9,6 +9,8 @@ module.exports = {
     '!src/mocks/**/*.ts',
     '!src/models/**/*.ts',
     '!src/types/**/*.d.ts',
+    '!src/config/**/*.ts',
+    '!src/utils/**/*.ts',
     '!src/components/Head/index.tsx'
   ],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],

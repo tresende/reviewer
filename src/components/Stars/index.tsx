@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import Star from './star'
-import { SCORE_LABEL, MAX_RATING } from 'utilts/constants'
+import { SCORE_LABEL, MAX_RATING } from 'utils/constants'
 
 import * as S from './styles'
 
@@ -28,9 +28,10 @@ const Stars = ({ quantity = 1, size = 28, onClick }: StarsProps) => {
       {solid.map((_, index) => (
         <Star key={index} onClick={() => handleClick(index + 1)} size={size} />
       ))}
-      {outline.map((_, index) => (
-        <Star key={index} onClick={() => handleClick(index + 1 + selected)} outline size={size} />
-      ))}
+      {outline.map((_, index) => {
+        const currentIndex = index + 1 + selected
+        return <Star key={currentIndex} onClick={() => handleClick(currentIndex)} outline size={size} />
+      })}
     </S.Wrapper>
   )
 }

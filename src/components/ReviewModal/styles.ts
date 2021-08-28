@@ -51,6 +51,9 @@ export const Title = styled.span`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.xlarge};
     font-weight: ${theme.font.light};
+    span {
+      color: ${theme.colors.gray450};
+    }
   `}
 `
 

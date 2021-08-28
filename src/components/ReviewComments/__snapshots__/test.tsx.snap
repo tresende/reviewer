@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ReviewComments /> should render component with muiltiple comments 1`] = `
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.c2 {
+  font-size: 1rem;
+  font-weight: 700;
+  font-weight: 400;
+}
+
+.c2::after {
+  color: #CCCCCC;
+  margin: 0 0.8rem;
+  content: '>';
+}
+
+.c3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.c0 {
+  margin-top: 1.6rem;
+  padding: 1.6rem 0;
+}
+
+.c4 {
+  padding: 3.2rem;
+  margin-top: 1.6rem;
+  border-radius: 0.4rem;
+  border: 1px solid;
+  border-color: #D8D8D8;
+  background-color: #FFFFFF;
+}
+
+<section
+  class="c0"
+>
+  <ol
+    class="c1"
+  >
+    <li
+      class="c2"
+    >
+      <a
+        href="#"
+      >
+        BeerOrCoffee
+      </a>
+    </li>
+    <li
+      class="c2"
+    >
+      <a
+        href="#"
+      >
+        Coworkings Brasil
+      </a>
+    </li>
+    <li
+      class="c2"
+    >
+      <a
+        href="#"
+      >
+        BrasíS.Itema/DF
+      </a>
+    </li>
+    <li
+      class="c2"
+    >
+      Asa Sul
+    </li>
+    <li
+      class="c2"
+    >
+      <a
+        href="#"
+      >
+        BSB Coworking
+      </a>
+    </li>
+    <li
+      class="c3"
+    >
+      Avaliações
+    </li>
+  </ol>
+  <div
+    class="c4"
+  >
+    <div
+      data-testid="comments"
+    />
+    <div
+      data-testid="comments"
+    />
+    <div
+      data-testid="comments"
+    />
+    <div
+      data-testid="comments"
+    />
+    <div
+      data-testid="comments"
+    />
+  </div>
+</section>
+`;

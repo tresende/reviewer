@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 import * as S from './styles'
 
 export type ModalProps = {
@@ -7,6 +9,14 @@ export type ModalProps = {
 }
 
 const Modal = ({ onClose, children, open }: ModalProps) => {
+  useEffect(() => {
+    const handleKeyUp = ({ key }: KeyboardEvent) => {
+      key === 'Escape' && onClose()
+    }
+
+    window.addEventListener('keyup', handleKeyUp)
+    return () => window.removeEventListener('keyup', handleKeyUp)
+  }, [])
   if (open === undefined) return null
 
   const modalClasses = `animate__animated ${!open ? 'animate__bounceOutUp' : 'animate__bounceInUp'} `
