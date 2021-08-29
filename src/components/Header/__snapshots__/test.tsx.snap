@@ -8,6 +8,7 @@ exports[`<Header /> should render closed header 1`] = `
 
 .c8 {
   display: none;
+  cursor: pointer;
   background-color: #FABA40;
   margin: 0.8rem;
   padding: 0.8rem;
@@ -84,7 +85,6 @@ exports[`<Header /> should render closed header 1`] = `
 .c13 {
   margin: 0.8rem;
   font-size: 1.4rem;
-  display: none;
 }
 
 .c0 {
@@ -195,6 +195,12 @@ exports[`<Header /> should render closed header 1`] = `
   }
 }
 
+@media (max-width:768px) {
+  .c13 {
+    display: none;
+  }
+}
+
 <header
   class="c0"
 >
@@ -222,23 +228,23 @@ exports[`<Header /> should render closed header 1`] = `
           </label>
         </div>
         <div
-          class="c4 c6"
+          class="c4 c6 animate__animated  "
         >
           Espaços de Coworking
         </div>
         <div
-          class="c4 c6"
+          class="c4 c6 animate__animated  "
         >
           Planos
         </div>
         <div
-          class="c4 c6"
+          class="c4 c6 animate__animated  "
         >
           Descontos
         </div>
       </div>
       <div
-        class="c3 c9"
+        class="c3 c9 animate__animated  "
       >
         <button
           class="c10 c11"
@@ -270,6 +276,7 @@ exports[`<Header /> should render opened header 1`] = `
 
 .c7 {
   display: none;
+  cursor: pointer;
   background-color: #FABA40;
   margin: 0.8rem;
   padding: 0.8rem;
@@ -346,7 +353,6 @@ exports[`<Header /> should render opened header 1`] = `
 .c10 {
   margin: 0.8rem;
   font-size: 1.4rem;
-  display: none;
 }
 
 .c0 {
@@ -448,6 +454,12 @@ exports[`<Header /> should render opened header 1`] = `
   }
 }
 
+@media (max-width:768px) {
+  .c10 {
+    display: none;
+  }
+}
+
 <header
   class="c0"
 >
@@ -475,23 +487,23 @@ exports[`<Header /> should render opened header 1`] = `
           </label>
         </div>
         <div
-          class="c5"
+          class="c5 animate__animated  "
         >
           Espaços de Coworking
         </div>
         <div
-          class="c5"
+          class="c5 animate__animated  "
         >
           Planos
         </div>
         <div
-          class="c5"
+          class="c5 animate__animated  "
         >
           Descontos
         </div>
       </div>
       <div
-        class="c3 c8"
+        class="c3 c8 animate__animated  "
       >
         <button
           class="c9"

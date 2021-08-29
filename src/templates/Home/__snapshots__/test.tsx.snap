@@ -8,6 +8,7 @@ exports[`<Home /> should open modal 1`] = `
 
 .c7 {
   display: none;
+  cursor: pointer;
   background-color: #FABA40;
   margin: 0.8rem;
   padding: 0.8rem;
@@ -84,7 +85,6 @@ exports[`<Home /> should open modal 1`] = `
 .c10 {
   margin: 0.8rem;
   font-size: 1.4rem;
-  display: none;
 }
 
 .c0 {
@@ -187,6 +187,12 @@ exports[`<Home /> should open modal 1`] = `
 }
 
 @media (max-width:768px) {
+  .c10 {
+    display: none;
+  }
+}
+
+@media (max-width:768px) {
 
 }
 
@@ -233,23 +239,23 @@ exports[`<Home /> should open modal 1`] = `
           </label>
         </div>
         <div
-          class="c5"
+          class="c5 animate__animated  "
         >
           Espaços de Coworking
         </div>
         <div
-          class="c5"
+          class="c5 animate__animated  "
         >
           Planos
         </div>
         <div
-          class="c5"
+          class="c5 animate__animated  "
         >
           Descontos
         </div>
       </div>
       <div
-        class="c3 c8"
+        class="c3 c8 animate__animated  "
       >
         <button
           class="c9"
