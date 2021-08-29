@@ -2,21 +2,24 @@
 
 exports[`<Home /> should open modal 1`] = `
 .c0 {
+  background-color: #222222;
+}
+
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  background-color: #222222;
+  max-width: 1100px;
+  margin: 0 auto;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  background-image: url('/img/logo.png');
   background-repeat: no-repeat;
   background-position: 8rem 1rem;
-  padding: 0 1.6rem;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -26,29 +29,21 @@ exports[`<Home /> should open modal 1`] = `
   -ms-flex-align: center;
   align-items: center;
   z-index: 20;
-  padding: 0 14rem;
 }
 
-.c4 {
+.c5 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  -webkit-box-pack: space-evenly;
-  -webkit-justify-content: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  white-space: nowrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: space-evenly;
-  -webkit-justify-content: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
   font-family: 'Montserrat';
   font-size: 1.4rem;
   font-weight: 700;
@@ -57,13 +52,28 @@ exports[`<Home /> should open modal 1`] = `
   padding: 0.8rem 0;
   color: #FFFFFF;
   cursor: pointer;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
 }
 
-.c2 {
+.c6 {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  width: 7rem;
+  -webkit-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
+}
+
+.c3 {
   display: none;
 }
 
-.c1 {
+.c2 {
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
   align-self: flex-end;
@@ -74,7 +84,7 @@ exports[`<Home /> should open modal 1`] = `
   border-radius: 0.4rem;
 }
 
-.c5 {
+.c7 {
   border: 2px solid #FABA40;
   color: #FABA40;
   background-color: transparent;
@@ -83,7 +93,7 @@ exports[`<Home /> should open modal 1`] = `
   font-weight: 700;
 }
 
-.c7 {
+.c9 {
   border: 2px solid #FFFFFF;
   color: #FFFFFF;
   background-color: transparent;
@@ -92,31 +102,39 @@ exports[`<Home /> should open modal 1`] = `
   font-weight: 700;
 }
 
-.c6 {
-  margin: 1rem 0;
+.c8 {
+  margin: 1rem;
 }
 
 @media (max-width:1170px) {
-  .c0 {
+  .c1 {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width:768px) {
+  .c1 {
+    background-image: url('/img/logo.png');
     background-position: 1rem 1rem;
     padding: 1rem 1.6rem;
   }
 
-  .c0 input:checked ~ #items {
+  .c1 input:checked ~ #items {
     display: block;
   }
 }
 
-@media (max-width:1170px) {
-  .c3 {
+@media (max-width:768px) {
+  .c4 {
     display: none;
     padding: 0;
     text-align: left;
   }
 }
 
-@media (max-width:1170px) {
-  .c4 {
+@media (max-width:768px) {
+  .c5 {
+    word-wrap: wrap;
     border-bottom: 1px solid #4b4b4b;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -124,23 +142,29 @@ exports[`<Home /> should open modal 1`] = `
   }
 }
 
-@media (max-width:1170px) {
-  .c1 {
+@media (max-width:768px) {
+  .c6 {
+    display: none;
+  }
+}
+
+@media (max-width:768px) {
+  .c2 {
     display: block;
     color: white;
     font-style: normal;
   }
 }
 
-@media (max-width:1170px) {
-  .c5 {
+@media (max-width:768px) {
+  .c7 {
     width: 100%;
     padding: 0.8rem;
   }
 }
 
-@media (max-width:1170px) {
-  .c7 {
+@media (max-width:768px) {
+  .c9 {
     width: 100%;
     padding: 0.8rem;
   }
@@ -166,60 +190,71 @@ exports[`<Home /> should open modal 1`] = `
 
 }
 
-<nav
+<header
   class="c0"
 >
-  <label
+  <nav
     class="c1"
-    for="hamburger"
   >
-    ☰
-  </label>
-  <input
-    class="c2"
-    id="hamburger"
-    type="checkbox"
-  />
-  <div
-    class="c3"
-    id="items"
-  >
+    <label
+      class="c2"
+      for="hamburger"
+    >
+      ☰
+    </label>
+    <input
+      class="c3"
+      id="hamburger"
+      type="checkbox"
+    />
     <div
       class="c4"
+      id="items"
     >
-      Espaços de Coworking
-    </div>
-    <div
-      class="c4"
-    >
-      Planos
-    </div>
-    <div
-      class="c4"
-    >
-      Descontos
-    </div>
-    <div
-      class="c4"
-      style="flex: 3;"
-    >
-      <button
+      <div
+        class="c5 c6"
+      >
+        <img
+          alt="Beer or Coffee"
+          src="/img/logo.png"
+        />
+      </div>
+      <div
         class="c5"
       >
-        Adiquirir um Plano
-      </button>
-      <span
-        class="c6"
+        Espaços de Coworking
+      </div>
+      <div
+        class="c5"
       >
-        Empresas
-      </span>
-      <button
-        class="c7"
-        color="white"
+        Planos
+      </div>
+      <div
+        class="c5"
       >
-        Oi, Thiago
-      </button>
+        Descontos
+      </div>
+      <div
+        class="c5"
+      >
+        <button
+          class="c7"
+        >
+          Adiquirir um Plano
+        </button>
+        <span
+          class="c8"
+        >
+          Empresas
+        </span>
+        <button
+          class="c9"
+          color="white"
+        >
+          Oi, Thiago
+        </button>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+</header>
 `;
