@@ -2,6 +2,8 @@
 ![](https://badges.aleen42.com/src/react.svg)
 ![](https://img.shields.io/badge/e2s--test-cypress-red)
 ![](https://img.shields.io/badge/unit--test-jest-brightgreen)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+![](https://badges.aleen42.com/src/eslint.svg)
 <br />
 ![](./badges/badge-branches.svg) 
 ![](./badges/badge-functions.svg)
@@ -9,7 +11,7 @@
 ![](./badges/badge-statements.svg)
 
 
-# reviewer
+# Reviewer 👀
 Next App for user Review :)
 
 ## Stack 🥞
@@ -18,6 +20,9 @@ Next App for user Review :)
 - Next
 - React
 - Webpack
+
+#### Style
+- Styled components
 
 #### Test
 - Jest (unit tests)
