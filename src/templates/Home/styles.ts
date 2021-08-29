@@ -31,6 +31,7 @@ export const Header = styled.div`
 export const Content = styled.section`
   ${({ theme }) => css`
     flex: 1;
+    height: 100%;
     background-color: ${theme.colors.gray200};
   `}
 `

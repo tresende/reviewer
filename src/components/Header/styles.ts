@@ -1,70 +1,15 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
-const breakpoint = 'large'
+const breakpoint = 'medium'
 
-export const Wrapper = styled.nav`
-  ${({ theme }) => css`
-    display: flex;
-    background-color: ${theme.colors.black};
-    flex-direction: column;
-    background-image: url('/img/logo.png');
-    background-repeat: no-repeat;
-    background-position: 8rem 1rem;
-    padding: 0 ${theme.spacings.xsmall};
-    ${media.lessThan(breakpoint)`
-      background-position: 1rem 1rem;
-      padding: 1rem ${theme.spacings.xsmall};
-      input:checked ~ #items {
-        display: block;
-      }
-    `};
-  `}
-`
-
-export const Items = styled.div`
-  display: flex;
-  align-items: center;
-  ${({ theme }) => css`
-    z-index: ${theme.layers.menu};
-    padding: 0 ${theme.spacings.huge};
-    ${media.lessThan(breakpoint)`
-      display: none;
-      padding: 0;
-      text-align: left;
-    `}
-  `}
-`
-
-export const MenuItem = styled.div`
-  ${({ theme }) => css`
-    flex: 1;
-    justify-content: space-evenly;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    font-family: 'Montserrat';
-    font-size: ${theme.font.sizes.small};
-    font-weight: ${theme.font.bold};
-    background-color: ${theme.colors.black};
-    z-index: ${theme.layers.menu};
-    padding: ${theme.spacings.xxsmall} 0;
-    color: ${theme.colors.white};
-    cursor: pointer;
-    ${media.lessThan(breakpoint)`
-      border-bottom:${theme.border.default} ${theme.colors.gray500};
-      flex-direction: column;
-    `}
-  `}
-`
-
-export const Toggle = styled.input`
-  display: none;
+export const Nav = styled.nav`
+  max-width: 1100px;
+  margin: 0 auto;
 `
 
 export const Icon = styled.label`
   ${({ theme }) => css`
-    align-self: flex-end;
     display: none;
     background-color: ${theme.colors.primary};
     margin: ${theme.spacings.xxsmall};
@@ -79,6 +24,62 @@ export const Icon = styled.label`
   `}
 `
 
+export const Items = styled.div`
+  display: flex;
+  align-items: center;
+  ${media.lessThan(breakpoint)`
+    flex-direction: column;
+  `}
+`
+
+export const MainMenu = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    align-items: center;
+    color: ${theme.colors.white};
+    font-weight: ${theme.font.bold};
+  `}
+  ${media.lessThan(breakpoint)`
+    flex-direction: column;
+    width:100%;
+    padding: 0 1rem;
+  `}
+`
+
+export const UserMenu = styled(MainMenu)`
+  display: flex;
+  justify-content: flex-end;
+`
+
+export const MenuItem = styled.div`
+  ${({ theme }) => css`
+    text-align: center;
+    font-family: 'Montserrat';
+    font-size: ${theme.font.sizes.small};
+    color: ${theme.colors.white};
+    ${media.lessThan(breakpoint)`
+      padding: ${theme.spacings.xxsmall} 0;
+      border-bottom: ${theme.border.default} ${theme.colors.gray500};
+      flex-direction: column;
+      width: 100%;
+      padding: 1rem;
+      display:none;
+    `}
+  `}
+`
+
+export const Logo = styled(MenuItem)`
+  ${media.lessThan(breakpoint)`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:0;
+    border:0;
+  `}
+`
+
 type HeaderButtonProps = {
   color?: 'primary' | 'white'
 }
@@ -86,18 +87,53 @@ type HeaderButtonProps = {
 export const HeaderButton = styled.button<HeaderButtonProps>`
   ${({ theme, color = 'primary' }) => css`
     border: 2px solid ${theme.colors[color]};
-    color: ${theme.colors[color]};
-    background-color: transparent;
-    padding: ${theme.spacings.xsmall};
     border-radius: 30px;
+    background-color: transparent;
+    color: ${theme.colors[color]};
     font-weight: ${theme.font.bold};
-
+    padding: ${theme.spacings.xsmall};
     ${media.lessThan(breakpoint)`
       width:100%;
+      margin-top:1rem;
+      justify-content: center;
       padding:  ${theme.spacings.xxsmall};
+      display:none;
     `}
   `}
 `
+
 export const Subitem = styled.span`
-  margin: 1rem 0;
+  ${({ theme }) => css`
+    margin: ${theme.spacings.xxsmall};
+    font-size: ${theme.font.sizes.small};
+    display: none;
+  `}
+`
+
+const WrapperModifiers = {
+  open: () => css`
+    ${MenuItem},
+    ${HeaderButton},
+    ${Subitem} {
+      display: flex;
+    }
+  `,
+  close: () => css`
+    ${Logo} {
+      display: flex;
+    }
+  `
+}
+
+export const Wrapper = styled.header<{ open: boolean }>`
+  ${({ theme, open }) => css`
+    background-color: ${theme.colors.black};
+    padding: 1rem;
+    input {
+      display: none;
+    }
+
+    ${open && WrapperModifiers.open()};
+    ${!open && WrapperModifiers.close()};
+  `}
 `

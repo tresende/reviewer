@@ -25,9 +25,7 @@ Next App for user Review :)
 ![](./badges/badge-lines.svg)
 ![](./badges/badge-statements.svg)
 
-
-
-- Jest (unit tests)
+- Jest + React Testing Library (unit tests)
 - Cypress (e2e tests)
 
 ### Mobile Version 📱

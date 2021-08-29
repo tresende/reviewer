@@ -18,7 +18,7 @@ const Home = ({ data }: HomeProps) => {
     setOpenModal(false)
   }
 
-  const [openModal, setOpenModal] = useState<boolean>(true)
+  const [openModal, setOpenModal] = useState<boolean>(false)
   return (
     <>
       <Header />
