@@ -49,6 +49,7 @@ exports[`<Modal /> should add fadeIn and bounceIn classes 1`] = `
 <div
   class="c0 animate__animated animate__fadeIn "
   open=""
+  role="modal"
 >
   <div
     class="c1 animate__animated animate__bounceInUp "
@@ -105,6 +106,7 @@ exports[`<Modal /> should add fadeOut and bounceOut classes 1`] = `
 
 <div
   class="c0 animate__animated animate__fadeOut "
+  role="modal"
 >
   <div
     class="c1 animate__animated animate__bounceOutUp "

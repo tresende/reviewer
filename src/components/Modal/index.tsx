@@ -23,7 +23,7 @@ const Modal = ({ onClose, children, open }: ModalProps) => {
   const backgroundClasses = `animate__animated ${!open ? 'animate__fadeOut' : 'animate__fadeIn'} `
 
   return (
-    <S.Wrapper open={open} onClick={onClose} className={backgroundClasses}>
+    <S.Wrapper open={open} onClick={onClose} className={backgroundClasses} role="modal">
       <S.Modal onClick={(e) => e.stopPropagation()} className={modalClasses}>
         {children}
       </S.Modal>
