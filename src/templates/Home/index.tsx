@@ -14,11 +14,12 @@ export type HomeProps = {
 }
 
 const Home = ({ data }: HomeProps) => {
+  const [openModal, setOpenModal] = useState<boolean>(true)
+
   const close = () => {
     setOpenModal(false)
   }
 
-  const [openModal, setOpenModal] = useState<boolean>(true)
   return (
     <>
       <Header />

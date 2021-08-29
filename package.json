@@ -5,9 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "test": "jest",
-    "test:coverage": "yarn test -- --coverage && jest-coverage-badges output \"./badges\"",
+    "test:coverage": "npm run test -- --coverage && jest-coverage-badges output \"./badges\"",
     "type-check": "tsc --project tsconfig.json --noEmit",
-    "test:watch": "yarn test --watch",
+    "test:watch": "npm run test --watch",
     "lint": "eslint . --max-warnings=0",
     "build": "next build",
     "start": "node server",

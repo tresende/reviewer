@@ -11,6 +11,7 @@ export const Nav = styled.nav`
 export const Icon = styled.label`
   ${({ theme }) => css`
     display: none;
+    cursor: pointer;
     background-color: ${theme.colors.primary};
     margin: ${theme.spacings.xxsmall};
     padding: ${theme.spacings.xxsmall};
@@ -106,7 +107,9 @@ export const Subitem = styled.span`
   ${({ theme }) => css`
     margin: ${theme.spacings.xxsmall};
     font-size: ${theme.font.sizes.small};
-    display: none;
+    ${media.lessThan(breakpoint)`
+      display:none;
+    `}
   `}
 `
 
