@@ -11,7 +11,7 @@ const Header = () => {
           <S.MainMenu>
             <S.Logo>
               <img src="/img/logo.png" alt="Beer or Coffee" />
-              <S.Icon data-testid="button" onClick={() => setOpen(!open)}>
+              <S.Icon data-testid="open-menu" onClick={() => setOpen(!open)}>
                 &#9776;
               </S.Icon>
             </S.Logo>

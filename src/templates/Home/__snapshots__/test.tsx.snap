@@ -227,7 +227,7 @@ exports[`<Home /> should open modal 1`] = `
           />
           <label
             class="c7"
-            data-testid="button"
+            data-testid="open-menu"
           >
             ☰
           </label>

@@ -216,7 +216,7 @@ exports[`<Header /> should render closed header 1`] = `
           />
           <label
             class="c8"
-            data-testid="button"
+            data-testid="open-menu"
           >
             ☰
           </label>
@@ -469,7 +469,7 @@ exports[`<Header /> should render opened header 1`] = `
           />
           <label
             class="c7"
-            data-testid="button"
+            data-testid="open-menu"
           >
             ☰
           </label>

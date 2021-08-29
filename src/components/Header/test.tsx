@@ -9,8 +9,8 @@ describe('<Header />', () => {
 
   it('should render closed header', () => {
     const { container } = render(<Header />)
-    screen.getByTestId('button').click()
-    screen.getByTestId('button').click()
+    screen.getByTestId('open-menu').click()
+    screen.getByTestId('open-menu').click()
 
     expect(container.firstChild).toMatchSnapshot()
   })
