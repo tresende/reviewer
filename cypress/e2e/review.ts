@@ -36,6 +36,6 @@ describe('Review', () => {
     cy.viewport('iphone-6')
     cy.exitModalOnOverlayClick()
     cy.openHamburguerMenu()
-    cy.findByText('Oi, Thiago').should('exist')
+    cy.findByText('Oi, Thiago').should('be.visible')
   })
 })

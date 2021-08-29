@@ -37,5 +37,5 @@ Cypress.Commands.add('exitModalOnOverlayClick', () => {
 })
 
 Cypress.Commands.add('openHamburguerMenu', () => {
-  cy.findByTestId('open-menu').click()
+  cy.get('[data-testid=open-menu]').click()
 })

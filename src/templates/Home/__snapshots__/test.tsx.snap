@@ -62,6 +62,7 @@ exports[`<Home /> should open modal 1`] = `
   font-family: 'Montserrat';
   font-size: 1.4rem;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 .c9 {
@@ -83,8 +84,10 @@ exports[`<Home /> should open modal 1`] = `
 }
 
 .c10 {
+  cursor: pointer;
   margin: 0.8rem;
   font-size: 1.4rem;
+  font-weight: 700;
 }
 
 .c0 {

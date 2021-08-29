@@ -60,6 +60,7 @@ export const MenuItem = styled.div`
     font-family: 'Montserrat';
     font-size: ${theme.font.sizes.small};
     color: ${theme.colors.white};
+    cursor: pointer;
     ${media.lessThan(breakpoint)`
       padding: ${theme.spacings.xxsmall} 0;
       border-bottom: ${theme.border.default} ${theme.colors.gray500};
@@ -105,8 +106,10 @@ export const HeaderButton = styled.button<HeaderButtonProps>`
 
 export const Subitem = styled.span`
   ${({ theme }) => css`
+    cursor: pointer;
     margin: ${theme.spacings.xxsmall};
     font-size: ${theme.font.sizes.small};
+    font-weight: ${theme.font.bold};
     ${media.lessThan(breakpoint)`
       display:none;
     `}
