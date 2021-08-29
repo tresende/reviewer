@@ -61,8 +61,6 @@ yarn dev
 
 ```sh
 yarn test
-
-npm run test:e2e:ci #for ci
 ```
 
 ## Testing e2e 🧪
