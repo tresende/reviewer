@@ -25,6 +25,7 @@ const Body = ({ handleSubmit }: BodyProps) => {
   const onSave = () => {
     handleSubmit(formData)
     setFormData(INITIAL_STATE)
+    setFormEnable(false)
   }
 
   return (
